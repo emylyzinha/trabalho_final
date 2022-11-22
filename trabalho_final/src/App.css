@@ -11,10 +11,10 @@
   will-change: filter;
 }
 .logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
+  filter: drop-shadow(0 0 2em #16B83E);
 }
 .logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+  filter: drop-shadow(0 0 2em #16B83E);
 }
 
 @keyframes logo-spin {
@@ -38,4 +38,87 @@
 
 .read-the-docs {
   color: #888;
+}
+
+/*barra rolagem*/
+::-webkit-scrollbar {
+  width: 0.7vw;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  background: #FFE11F;
+}
+
+
+body {
+  height: 80%;
+  background-color: #16B83E;
+  color: #FFE11F;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+#root {
+  width: 40vw;
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+
+input, select {
+  background-color: #FFE11F;
+  border: 2px solid #FFE11F;
+  color: #1824ce;
+  border-radius: 5px;
+  height: 24px;
+  width: 100%;
+  font-size: 14px;
+  text-align: center;
+  margin: 2px;
+}
+
+.container-teste{
+  width: 100%;
+  padding-bottom: 10px;
+  background-color: #FFE11F;
+  color: #16B83E;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+.btn-teste {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+button {
+  width: 30%;
+  height: 50px;
+  text-align: center;
+  border-radius: 8px;
+  border: 1px solid #FFE11F;
+  margin: 5px;
+  font-size: 1em;
+  font-weight: 500;
+  background-color: #FFE11F;
+  color: #16B83E;
+  cursor: pointer;
+  transition: border-color 0.25s;
+}
+button:hover {
+  border-color: #16B83E;
+}
+button:focus,
+button:focus-visible {
+  outline: 4px auto -webkit-focus-ring-color;
+}
+h1 {
+  font-size: 60px;
 }
