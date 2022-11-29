@@ -10,7 +10,7 @@ type TSession = {
    } | undefined
 }
 
-const port = 3030
+const port = 8080
 const app = express()
 const session: TSession = {}
 
@@ -109,6 +109,6 @@ app.get("/api/logged/:token", (req, res) => {
 })
 
 
-app.use("/", express.static("../app/dist"))
+app.use("/", express.static("../trabalho_final/dist"))
 
 app.listen(port, () => console.log(`⚡ servidor ${port}`))

@@ -1,3 +1,4 @@
+import { text } from "express";
 import React from "react";
 import { Dispatch, FormEventHandler, useState, SetStateAction,  } from "react";
 
@@ -83,13 +84,13 @@ export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<strin
 
     return <>
         <form onSubmit={alterarDados}>
-            <h1>ALTERAR DADOS</h1>
+            <h1>slterar dados</h1>
             <input name="_name" value={_name}/>
             <input name="email" value={email}/>
-            <input name="password" type="password" placeholder="SENHA" />
-            <button onClick={mostrarDados}><b>PREENCHER</b></button>
-            <button onClick={() => setRoute("teste")}><b>VOLTAR</b></button>
-            <button><b>ALTERAR</b></button>
+            <input name="password" type="password" placeholder="senha" />
+            <button onClick={mostrarDados}><b>preencher</b></button>
+            <button onClick={() => setRoute("teste")}><b>voltar</b></button>
+            <button><b>alterar</b></button>
         </form>
     </>
 }

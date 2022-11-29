@@ -1,4 +1,7 @@
 import { Dispatch, FormEventHandler, SetStateAction } from "react";
+import player from "./img/player.png"
+import players from "./img/players.png"
+import arrow from "./img/arrow_right.png"
 
 export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<string>> }) {
   const enviarDados: FormEventHandler<HTMLFormElement> = async ev => {
@@ -33,12 +36,18 @@ export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<strin
 
   return <>
     <form onSubmit={enviarDados}>
-      <h1>cadastro</h1>
-      <input name="_name" placeholder="nome" />
-      <input name="email" placeholder="email" />
-      <input name="password" type="password" placeholder="senha" />
-      <button onClick={() => setRoute("app")}><b>voltar</b></button>
-      <button><b>cadastrar</b></button>
+      <h1>jogadores</h1>
+      <div className="container_flex">
+        <div className="flex">
+          <img className="players" src={player}/>
+          <input placeholder="nome player 1"></input>
+        </div>
+        <div className="flex">
+          <img className="players" src={players}/>
+          <input placeholder="nome player 2"></input>
+        </div>
+      </div>
+      <button onClick={() => setRoute("times")}><img src={arrow}/></button>
     </form>
   </>
 }

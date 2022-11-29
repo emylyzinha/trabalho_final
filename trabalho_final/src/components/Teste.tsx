@@ -51,19 +51,18 @@ export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>
   }
 
   return <>
-    <h1>TESTE: BUSCAR DADOS DO USUÁRIO</h1>
+    <h1>dados do usuário</h1>
     <div className="container-teste">
       <div>
-        <label><h3>NOME: </h3></label><b>{name}</b>
+        <label><h3>nome: </h3></label><b>{name}</b>
       </div>
       <div>
-        <label><h3>EMAIL: </h3></label><b>{email}</b>
+        <label><h3>email: </h3></label><b>{email}</b>
       </div>
     </div>
     <div className = "btn-teste">
-      <button onClick={buscarDados}><b>BUSCAR</b></button>
-      <button onClick={alteraDados}><b>ALTERAR</b></button>
-      <button onClick={logOff}><b>SAIR</b></button>
+      <button onClick={buscarDados}><b>buscar</b></button>
+      <button onClick={logOff}><b>sair</b></button>
     </div>
   </>
 }

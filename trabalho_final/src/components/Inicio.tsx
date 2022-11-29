@@ -1,4 +1,5 @@
 import { Dispatch, FormEventHandler, SetStateAction } from "react";
+import logo from "./img/logoVeiaCopa.png";
 
 export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>}) {
   const enviarDados: FormEventHandler<HTMLFormElement> = async ev => {
@@ -19,7 +20,7 @@ export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>
     if (request.status >= 200 && request.status <= 299) {
       localStorage.setItem("token", responseData.token)
       alert("PARABAEINZ!")
-      setRoute("jogadores")
+      setRoute("teste")
       return
     }
 
@@ -34,12 +35,9 @@ export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>
   
   return <>
     <form onSubmit={enviarDados}>
-      <h1>login</h1>
-      <input name="email" placeholder="email" />
-      <input name="password" type="password" placeholder="senha" />
-      
+      <img src={logo}/>
       <button onClick={() => setRoute("cadastro")}><b>cadastrar</b></button>
-      <button onClick={() => setRoute("jogadores")}><b>entrar</b></button>
+      <button onClick={() => setRoute("login")}><b>entrar</b></button>
     </form>
   </>
 }
