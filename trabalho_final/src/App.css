@@ -53,7 +53,7 @@
   
   body {
     height: 80%;
-    background-color: #FFE11F;
+    background-color: black;
     color: #16B83E;
     align-items: center;
     display: flex;
@@ -135,6 +135,20 @@
 
   .fundo {
     background-color: #ffff;
+    height: 350px;
+  }
+
+  .veiaTriste{
+    width: 50%;
+    margin-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .buttonVoltar{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0px;
   }
 
   .flex {

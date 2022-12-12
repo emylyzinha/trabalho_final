@@ -51,7 +51,7 @@ export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>
   }
 
   return <>
-    <h1>dados do usuário</h1>
+    <h1>o player "1" ganhou</h1>
     <div className="container-teste">
       <div>
         <label><h3>nome: </h3></label><b>{name}</b>

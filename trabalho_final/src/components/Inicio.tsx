@@ -2,6 +2,7 @@ import { Dispatch, FormEventHandler, SetStateAction } from "react";
 import logo from "./img/logoVeiaCopa.png";
 
 export default function ({setRoute}: {setRoute: Dispatch<SetStateAction<string>>}) {
+
   const enviarDados: FormEventHandler<HTMLFormElement> = async ev => {
     ev.preventDefault()
     const { email, password } = ev.currentTarget

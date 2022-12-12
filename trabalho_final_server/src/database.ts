@@ -11,7 +11,7 @@ const db = new Database(
           id        INTEGER PRIMARY KEY AUTOINCREMENT,
           name      TEXT, 
           email     TEXT UNIQUE, 
-          password  TEXT  
+          password  TEXT
         )
       `,
       err => {

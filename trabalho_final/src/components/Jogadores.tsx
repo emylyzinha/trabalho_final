@@ -6,45 +6,26 @@ import arrow from "./img/arrow_right.png"
 export default function ({ setRoute }: { setRoute: Dispatch<SetStateAction<string>> }) {
   const enviarDados: FormEventHandler<HTMLFormElement> = async ev => {
     ev.preventDefault()
-    const { _name, email, password } = ev.currentTarget
 
-    const request = await fetch(`/api/user/`, {
-      method: "POST",
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        name: _name.value,
-        email: email.value,
-        password: password.value
-      })
-    })
+    let player1 = 'nome_player1';
+    localStorage.setItem(player1, 'nome1')
 
-    if (request.status >= 200 && request.status <= 299) {
-      alert("PARABAEINZ!")
-      setRoute("login")
-      return
-    }
-
-    const responseData = await request.json()
-    
-    if (responseData.error) {
-      alert(responseData.error)
-      return
-    }
-
-    alert("Cara! deu um erro tão foda, que eu nem sei o que foi!")
+    let player2 = 'nome_player2';
+    localStorage.setItem(player2, 'nome2')
   }
 
+  
   return <>
     <form onSubmit={enviarDados}>
       <h1>jogadores</h1>
       <div className="container_flex">
         <div className="flex">
           <img className="players" src={player}/>
-          <input placeholder="nome player 1"></input>
+          <input placeholder="nome player 1" name="player1" className="play_um"></input>
         </div>
         <div className="flex">
           <img className="players" src={players}/>
-          <input placeholder="nome player 2"></input>
+          <input placeholder="nome player 2" name="player2" className="play_dois"></input>
         </div>
       </div>
       <button onClick={() => setRoute("times")}><img src={arrow}/></button>
